@@ -28,11 +28,10 @@
 
         <label>
           Convert <b>to</b>
-          <select>
-            <option>USD - Dollar </option>
-            <option>EUR - Euro</option>
-            <option>Libra - England</option>
-            <option>Bitcoin - BitCoin Digital</option>
+          <select class="currency-select">
+            <option value="dolar">Dollar</option>
+            <option value="euro">Euro</option>
+            <option value="bitcoin">Bitcoin</option>
           </select>
         </label> 
 
@@ -45,7 +44,7 @@
         
         <section>
             <div class="currency-box">
-                <img class="currency-img" src="./assets/img/real.svg" alt="logo-moeda-a-converter">
+                <img  src="./assets/img/real.svg" alt="logo-moeda-a-converter">
                 <p class="currency">Real</p>
                 <p class="currency-value-to-convert">0,00</p>
             </div>
@@ -54,7 +53,7 @@
             
             <div class="currency-box">
                 <img  class="currency-img" src="./assets/img/usd.svg" alt="logo-moeda-a-converter">
-                <p class="currency">Dollar</p>
+                <p class="currency" id="currency-name">Dollar</p>
                 <p class="currency-value">0,00</p>
             </div>
         </section>
