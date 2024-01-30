@@ -1,15 +1,16 @@
 const btnSwitchNow = document.querySelector(".convert-button");
 const currencySelect = document.querySelector(".currency-select");
 
-function convertValues() {
+const convertValues = async () =>  {
   const inputCurrencyValue = document.querySelector(".input-currency").value;
-  const currencyValueToCovert = document.querySelector(
-    ".currency-value-to-convert"
-  );
+  const currencyValueToCovert = document.querySelector(".currency-value-to-convert");
+  //Async Await (Cosumo de API AwesomeAPI > awesomeapi.com.br teste em ter-30-jan-2024 )
+  const data = await fetch ("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,GBP-BRL").then(response => response.json())
+ 
   const currencyValueCoverted = document.querySelector(".currency-value");
-  const dolarToday = 5.08;
-  const euroToday = 5.34;
-  const libraToday = 6.16;
+  const dolarToday = data.USDBRL.high
+  const euroToday = data.EURBRL.high
+  const libraToday = data.GBPBRL.high
 
   const convertedValue = inputCurrencyValue / dolarToday;
 
